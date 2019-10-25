@@ -43,9 +43,154 @@ Day 6,7 added on October 20th, 2019
 <p>
 Day 8,9 added on October 23rd, 2019
 </p>
-
+<p>
+Day 10,11,scroll map added on October 25rd, 2019 
+</p>
 <center>
 
+<div class="w3-content w3-display-container">
+
+
+<div class="mySlides">
+<img src="images/1/map1.png" style="width:60%">
+  <div class="text"><a href="day/1.html">Day 1: The Beginning 
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/2/map2.png" style="width:60%">
+  <div class="text"><a href="day/2.html">Day 2: Short Ride To Hope
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/3/map3.png" style="width:60%">
+  <div class="text"><a href="day/3.html">Day 3: Stronger than the Guide Book
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/4/map4.png" style="width:60%">
+  <div class="text"><a href="day/4.html">Day 4: In the Desert
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/5/map5.png" style="width:60%">
+  <div class="text"><a href="day/5.html">Day 5: Out of the desert
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/6/map6.png" style="width:60%">
+  <div class="text"><a href="day/6.html">Day 6: Biking through the Rain
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/7/map7.png" style="width:60%">
+  <div class="text"><a href="day/7.html">Day 7: To Golden
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/8/map8.png" style="width:60%">
+  <div class="text"><a href="day/8.html">Day 8: Golden to Banff
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/9/map9.png" style="width:60%">
+  <div class="text"><a href="day/9.html">Day 9: In Calgary for some rest
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/10/map10.png" style="width:60%">
+  <div class="text"><a href="day/10.html">Day 10: Praries ahead!
+</a></div>
+</div>
+
+
+
+
+
+<div class="mySlides">
+<img src="images/11/map11.png" style="width:60%">
+  <div class="text"><a href="day/11.html">Day 11: Cool clouds
+</a></div>
+</div>
+
+
+
+<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+<input id="day_chooser" type="range" min="1" max="11" value="1" step="1" onchange="changeDay(this.value)">
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+    document.getElementById("day_chooser").value =  slideIndex;
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";
+}
+
+function changeDay(n){
+	slideIndex = n;
+	showDivs(slideIndex);
+}
+</script>
 
 
 <div>
@@ -84,6 +229,14 @@ Day 8,9 added on October 23rd, 2019
 	</tr>
 	<tr>
 		<td><a href="day/9.html">Day 9: In Calgary for some rest
+</a></td>
+	</tr>
+	<tr>
+		<td><a href="day/10.html">Day 10: Praries ahead!
+</a></td>
+	</tr>
+	<tr>
+		<td><a href="day/11.html">Day 11: Cool clouds
 </a></td>
 	</tr>
 </table>
