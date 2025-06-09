@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+  	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-39729658-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-39729658-4');
+</script>
+
+  
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= "Day "+number.to_s+": " + title || "Middleman" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+  </head>
+  <body>
+	  <div class="header">
+
+	  </div>
+	  <div class="topnav">
+		<% if previous_page.eql?("home")==false %>
+	  		<%= link_to '< Day '+previous_page, '/day/'+previous_page+'.html', :relative => true %>
+		<% end %>
+		<a href="../index.html">Home</a>
+		<% if next_page.eql?("home")==false %>
+			<%= link_to 'Day '+next_page +' >', '/day/'+next_page+'.html', :relative => true %>
+		<% end %>
+	</div>
+	<h1><%= title %> </h1>
+	<h4><%=  date %> </h4>
+	<div class="content">
+    		<%= yield %>
+    	</div>
+
+		<div class="footer">
+			<div class="topnav">
+				<% if previous_page.eql?("home")==false %>
+					<%= link_to '< Day '+previous_page, '/day/'+previous_page+'.html', :relative => true %>
+				<% end %>
+				<a href="../index.html">Home</a>
+				<% if next_page.eql?("home")==false %>
+					<%= link_to 'Day '+next_page +' >', '/day/'+next_page+'.html', :relative => true %>
+				<% end %>
+			</div>
+	  </div>
+  </body>
+</html>
